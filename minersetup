@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ "$EUID" -ne 0 ]
-	then echo "Yonetici olarak calistirin"
+	then echo "Yonetici olarak calistirin , Run is administrator "
 else
 apt update -y
 apt install autoconf libcurl4-openssl-dev libjansson-dev openssl libssl-dev gcc gawk automake git -y
@@ -9,5 +9,6 @@ cd cpuminer-multi
 ./autogen.sh
 ./configure
 make
-printf "Klasorun adını degistireblirssiniz ./MinerMonero -a cryptonight -o stratum+tcp://pool.usxmrpool.com:7777 -u wallet adresinizi yazınız -p x -t 4"
+printf "TR: Klasorun adını degistireblirsiniz ./MinerMonero -a cryptonight -o stratum+tcp://pool.usxmrpool.com:7777 -u wallet adresinizi yazınız -p x -t 4"
+printf "EN :Folder name change ./MinerMonero -a cryptonight -o stratum+tcp://pool.usxmrpool.com:7777 -u Your Wallet Adresses -p x -t 4"
 fi
